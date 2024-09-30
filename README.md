@@ -1,7 +1,3 @@
-Ecco una versione più chiara e leggibile della descrizione, adatta per un file `README.md` di una repository.
-
----
-
 # Folder Creator
 
 **Folder Creator** è un'applicazione Python con interfaccia grafica (GUI) che permette di creare facilmente una o più cartelle in un percorso scelto dall'utente. È stata progettata per essere intuitiva e semplice da usare.
