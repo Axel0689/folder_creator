@@ -18,13 +18,17 @@
 
 ## Funzionalità
 
-- **Nome della cartella:** L'utente può inserire il nome di base delle cartelle da creare;
-- **Numero di cartelle:** È possibile specificare quante cartelle si desidera creare;
-- **Modalità di generazione:**
-  - **Incrementale:** Le cartelle verranno create con un nome numerato progressivamente (es. `Cartella_1`, `Cartella_2`, ecc.);
-  - **Singola:** Verrà creata una sola cartella con il nome specificato (es. `Posizione`, `Luogo`, ecc.).
-- **Nidifica:** Consente di creare cartelle all'interno di altre cartelle.
-- **Selezione del percorso:** Consente di selezionare facilmente la directory in cui creare le cartelle tramite un comodo selettore di percorsi.
+- **NOME DELLA CARTELLA:** L'utente può inserire il nome di base delle cartelle da creare;
+
+- **NUMERO DI CARTELLE:** È possibile specificare quante cartelle si desidera creare (attiva in modalità Incrementale);
+
+- **MODALITÀ DI GENERAZIONE:**
+  - **INCREMENTALE:** Le cartelle verranno create con un nome numerato progressivamente (es. `Cartella_1`, `Cartella_2`, ecc.);
+  - **UNICO:** Verrà creata una sola cartella per ogni nome specificato (es. `Posizione`, `Luogo`, ecc.).
+
+- **NIDIFICA:** Consente di creare cartelle all'interno di altre cartelle.
+
+- **PERCORSO DELLA CARTELLA:** Consente di selezionare facilmente la directory in cui creare le cartelle tramite un comodo selettore di percorsi.
 
 ## Come funziona
 
@@ -36,23 +40,25 @@
 
 ## Download app
 
-E' presente un semplice file **.exe** , utile da inserire comodamente in una chiavetta USB o semplicemente da utilizzare sul PC stesso.
+In **Release** è presente un semplice file **.zip**. Una volta estratto, si avrà un file eseguibile utile da inserire comodamente in una chiavetta USB o semplicemente da utilizzare sul PC stesso.
 L'interfaccia grafica si aprirà e potrai iniziare subito a creare le cartelle.
 
 ## Updates
 
 - ${\color{red}(01.10.24)}$
   
-  - **v0.1** (Prima Release dell'applicazione)
+  - **v0.1** (Prima Release)
 
 &nbsp;
 
 ## Screenshots
 
+Modalità Incrementale
 <p align="left">
   <img src="https://github.com/Axel0689/folder_creator/blob/main/screenshots/mode_incrementale.png">
 </p>
 
+Modalità Unico
 <p align="left">
   <img src="https://github.com/Axel0689/folder_creator/blob/main/screenshots/mode_unico.png">
 </p>
