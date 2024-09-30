@@ -1,7 +1,7 @@
 # Folder Creator
 
 <p align="center">
-  <img src="https://github.com/Axel0689/RPG-UE5-Project/blob/main/imgs/logo.png">
+  <img src="https://github.com/Axel0689/folder_creator/blob/main/imgs/icon%20project%20(folder%20creator).png">
 </p>
 
 > **Folder Creator** è un'applicazione Python con interfaccia grafica (GUI) che permette di creare facilmente una o più cartelle in un percorso scelto dall'utente. È stata progettata per essere intuitiva e semplice da usare.
