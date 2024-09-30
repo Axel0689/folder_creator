@@ -7,6 +7,7 @@
 - [Funzionalità](#funzionalità)
 - [Come funziona](#come-funziona)
 - [Download App](#download-app)
+- [Screenshots](#screenshots)
 
 &nbsp;
 
@@ -35,6 +36,6 @@ E' presente un semplice file **.exe** , utile da inserire comodamente in una chi
 
 L'interfaccia grafica si aprirà e potrai iniziare subito a creare le cartelle.
 
-## Screenshot (Opzionale)
+## Screenshots
 
 _(In Arrivo)_
