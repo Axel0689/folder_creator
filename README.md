@@ -4,13 +4,13 @@
 
 ## Funzionalità
 
-- ${\color{gold}**Nome personalizzato della cartella:**$ L'utente può inserire il nome di base delle cartelle da creare;
-- ${\color{gold}**Numero di cartelle:**$ È possibile specificare quante cartelle si desidera creare;
-- ${\color{gold}**Modalità di generazione:**$
+- ${\color{gold}**Nome personalizzato della cartella:**}$ L'utente può inserire il nome di base delle cartelle da creare;
+- ${\color{gold}**Numero di cartelle:**}$ È possibile specificare quante cartelle si desidera creare;
+- ${\color{gold}**Modalità di generazione:**}$
   - **Incrementale:** Le cartelle verranno create con un nome numerato progressivamente (es. `Cartella_1`, `Cartella_2`, ecc.);
   - **Singola:** Verrà creata una sola cartella con il nome specificato.
-- ${\color{gold}**Nidifica:**$ Le cartelle verranno create, partendo dalla prima, l'uno dentro l'altra;  
-- ${\color{gold}**Selezione del percorso:**$ L'app consente di selezionare facilmente la directory in cui creare le cartelle tramite un comodo selettore di percorsi.
+- ${\color{gold}**Nidifica:**}$ Le cartelle verranno create, partendo dalla prima, l'uno dentro l'altra;  
+- ${\color{gold}**Selezione del percorso:**}$ L'app consente di selezionare facilmente la directory in cui creare le cartelle tramite un comodo selettore di percorsi.
 
 ## Come funziona
 
