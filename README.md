@@ -5,7 +5,7 @@
 # Index
 
 - [Funzionalità](#funzionalità)
-- [Come funziona](#comefunziona)
+- [Come funziona](#come-funziona)
 - [Download App](#download)
 
 
