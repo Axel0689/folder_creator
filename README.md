@@ -4,37 +4,25 @@
 
 ## Funzionalità
 
-- **Nome personalizzato della cartella:** L'utente può inserire il nome di base delle cartelle da creare.
-- **Numero di cartelle:** È possibile specificare quante cartelle si desidera creare.
-- **Modalità di generazione:** 
-  - **Incrementale:** Le cartelle verranno create con un nome numerato progressivamente (es. `Cartella_1`, `Cartella_2`, ecc.).
+- ${\color{gold}**Nome personalizzato della cartella:**$ L'utente può inserire il nome di base delle cartelle da creare;
+- ${\color{gold}**Numero di cartelle:**$ È possibile specificare quante cartelle si desidera creare;
+- ${\color{gold}**Modalità di generazione:**$
+  - **Incrementale:** Le cartelle verranno create con un nome numerato progressivamente (es. `Cartella_1`, `Cartella_2`, ecc.);
   - **Singola:** Verrà creata una sola cartella con il nome specificato.
-  
-- **Selezione del percorso:** L'app consente di selezionare facilmente la directory in cui creare le cartelle tramite un comodo selettore di percorsi.
+- ${\color{gold}**Nidifica:**$ Le cartelle verranno create, partendo dalla prima, l'uno dentro l'altra;  
+- ${\color{gold}**Selezione del percorso:**$ L'app consente di selezionare facilmente la directory in cui creare le cartelle tramite un comodo selettore di percorsi.
 
 ## Come funziona
 
 1. Inserisci il nome della cartella che vuoi creare.
-2. Specifica quante cartelle desideri (solo se hai scelto la modalità "Incrementale").
-3. Scegli se creare una sola cartella o più cartelle incrementali.
+2. Scegli se creare una sola cartella (Unico) o più cartelle incrementali (Incrementale).
+3. Nella modalità "Incrementale", specifica quante il numero di cartelle da creare.
 4. Seleziona il percorso in cui vuoi che le cartelle vengano create.
-5. Clicca su "Crea" e lascia che l'app faccia il resto!
+5. Clicca su "Crea Cartelle" e lascia che l'app faccia il resto!
 
-## Requisiti
+## Download app
 
-- **Librerie Python:** Tkinter (incluso in Python), os.
-- **Python 3.6+**
-
-## Come avviare l'app
-
-1. Clona la repository:
-   ```bash
-   git clone https://github.com/tuo-utente/folder-creator.git
-   ```
-2. Esegui lo script:
-   ```bash
-   python folder_creator.py
-   ```
+E' presente un semplice file .exe , utile per portarlo con se su chiavetta USB o semplicemente lasciarlo in una cartella su Windows
 
 L'interfaccia grafica si aprirà e potrai iniziare subito a creare le cartelle.
 
