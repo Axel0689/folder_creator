@@ -2,6 +2,13 @@
 
 > **Folder Creator** è un'applicazione Python con interfaccia grafica (GUI) che permette di creare facilmente una o più cartelle in un percorso scelto dall'utente. È stata progettata per essere intuitiva e semplice da usare.
 
+# Index
+
+- [Funzionalità](#funzionalità)
+- [Come funziona](#comefunziona)
+- [Download App](#download)
+
+
 ## Funzionalità
 
 - **Nome della cartella:** L'utente può inserire il nome di base delle cartelle da creare;
