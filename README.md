@@ -52,3 +52,7 @@ L'interfaccia grafica si aprirà e potrai iniziare subito a creare le cartelle.
 <p align="left">
   <img src="https://github.com/Axel0689/folder_creator/blob/main/screenshots/mode_incrementale.png">
 </p>
+
+<p align="left">
+  <img src="https://github.com/Axel0689/folder_creator/blob/main/screenshots/mode_unico.png">
+</p>
