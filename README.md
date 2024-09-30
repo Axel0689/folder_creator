@@ -39,7 +39,7 @@ L'interfaccia grafica si aprirà e potrai iniziare subito a creare le cartelle.
 
 - ${\color{red}(01.10.24)}$
   
-  - **v0.5** (Prima Release dell'applicazione)
+  - **v0.1** (Prima Release dell'applicazione)
 
 &nbsp;
 
