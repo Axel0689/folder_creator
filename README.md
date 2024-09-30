@@ -8,6 +8,7 @@
 - [Come funziona](#come-funziona)
 - [Download App](#download-app)
 
+&nbsp;
 
 ## Funzionalità
 
