@@ -7,6 +7,7 @@
 - [Funzionalità](#funzionalità)
 - [Come funziona](#come-funziona)
 - [Download App](#download-app)
+- [Updates](#updates)
 - [Screenshots](#screenshots)
 
 &nbsp;
@@ -31,10 +32,16 @@
 
 ## Download app
 
-E' presente un semplice file **.exe** , utile da inserire comodamente in una chiavetta USB o semplicemente da utilizzare sul PC stesso
-
-
+E' presente un semplice file **.exe** , utile da inserire comodamente in una chiavetta USB o semplicemente da utilizzare sul PC stesso.
 L'interfaccia grafica si aprirà e potrai iniziare subito a creare le cartelle.
+
+## Updates
+
+- ${\color{red}(01.10.24)}$
+  
+  - **v0.5** (Prima Release dell'applicazione)
+
+&nbsp;
 
 ## Screenshots
 
