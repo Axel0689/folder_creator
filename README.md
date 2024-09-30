@@ -4,13 +4,13 @@
 
 ## Funzionalità
 
-- **Nome personalizzato della cartella:** L'utente può inserire il nome di base delle cartelle da creare;
+- **Nome della cartella:** L'utente può inserire il nome di base delle cartelle da creare;
 - **Numero di cartelle:** È possibile specificare quante cartelle si desidera creare;
 - **Modalità di generazione:**
   - **Incrementale:** Le cartelle verranno create con un nome numerato progressivamente (es. `Cartella_1`, `Cartella_2`, ecc.);
-  - **Singola:** Verrà creata una sola cartella con il nome specificato.
-- **Nidifica:** Le cartelle verranno create, partendo dalla prima, l'uno dentro l'altra;  
-- **Selezione del percorso:** L'app consente di selezionare facilmente la directory in cui creare le cartelle tramite un comodo selettore di percorsi.
+  - **Singola:** Verrà creata una sola cartella con il nome specificato (es. `Posizione`, `Luogo`, ecc.).
+- **Nidifica:** Consente di creare cartelle all'interno di altre cartelle.
+- **Selezione del percorso:** Consente di selezionare facilmente la directory in cui creare le cartelle tramite un comodo selettore di percorsi.
 
 ## Come funziona
 
@@ -22,7 +22,8 @@
 
 ## Download app
 
-E' presente un semplice file .exe , utile per portarlo con se su chiavetta USB o semplicemente lasciarlo in una cartella su Windows
+E' presente un semplice file **.exe** , utile da inserire comodamente in una chiavetta USB o semplicemente da utilizzare sul PC stesso
+
 
 L'interfaccia grafica si aprirà e potrai iniziare subito a creare le cartelle.
 
