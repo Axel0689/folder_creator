@@ -6,7 +6,7 @@
 
 - [Funzionalità](#funzionalità)
 - [Come funziona](#come-funziona)
-- [Download App](#download)
+- [Download App](#download-app)
 
 
 ## Funzionalità
