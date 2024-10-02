@@ -46,8 +46,10 @@ L'interfaccia grafica si aprirà e potrai iniziare subito a creare le cartelle.
 ## Updates
 
 - ${\color{red}(01.10.24)}$
-  
-  - **v0.1** (Prima Release)
+  - **v0.1** (Release 1)
+
+- ${\color{red}(Coming Soon)}$
+  - **v0.2** (Release 2)
 
 &nbsp;
 
