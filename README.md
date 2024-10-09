@@ -1,4 +1,4 @@
-# Folder Creator v0.1 - by Axel0689
+# Folder Creator - by Axel0689
 
 <p align="left">
   <img src="https://github.com/Axel0689/folder_creator/blob/main/imgs/logo.png", width="400" height="400">
