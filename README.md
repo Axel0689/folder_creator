@@ -55,12 +55,7 @@ L'interfaccia grafica si aprirà e potrai iniziare subito a creare le cartelle.
 
 ## Screenshots
 
-Modalità Incrementale
 <p align="left">
-  <img src="">
+  <img src="https://github.com/Axel0689/folder_creator/blob/main/screenshots/screenshot_v02.png">
 </p>
 
-Modalità Multiplo
-<p align="left">
-  <img src="">
-</p>
