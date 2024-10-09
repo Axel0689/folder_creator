@@ -1,7 +1,7 @@
 # Folder Creator - by Axel0689
 
 <p align="left">
-  <img src="https://github.com/Axel0689/folder_creator/blob/main/imgs/logo.png", width="400" height="400">
+  <img src="", width="400" height="400">
 </p>
 
 > **Folder Creator** è un'applicazione che permette di creare facilmente una o più cartelle in un percorso scelto dall'utente. È stata progettata con linguaggio Python e interfaccia GUI per essere intuitiva e semplice da usare.
@@ -55,14 +55,12 @@ L'interfaccia grafica si aprirà e potrai iniziare subito a creare le cartelle.
 
 ## Screenshots
 
-- **v0.1 (Release 1)**
-
 Modalità Incrementale
 <p align="left">
-  <img src="https://github.com/Axel0689/folder_creator/blob/main/screenshots/mode_incrementale.png">
+  <img src="">
 </p>
 
-Modalità Unico
+Modalità Multiplo
 <p align="left">
-  <img src="https://github.com/Axel0689/folder_creator/blob/main/screenshots/mode_unico.png">
+  <img src="">
 </p>
