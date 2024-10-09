@@ -18,22 +18,22 @@
 
 ## Funzionalità
 
-- **NOME DELLA CARTELLA:** L'utente può inserire il nome di base delle cartelle da creare;
+- **NOME CARTELLA/E:** L'utente può inserire il nome di base delle cartelle da creare;
 
-- **NUMERO DI CARTELLE:** È possibile specificare quante cartelle si desidera creare (attiva in modalità Incrementale);
+- **NUMERO CARTELLA/E:** È possibile specificare quante cartelle si desidera creare (attiva in modalità Incrementale);
 
-- **MODALITÀ DI GENERAZIONE:**
+- **MODALITÀ DI CREAZIONE:**
   - **INCREMENTALE:** Le cartelle verranno create con un nome numerato progressivamente (es. `Cartella_1`, `Cartella_2`, ecc.);
-  - **UNICO:** Verrà creata una sola cartella per ogni nome specificato (es. `Posizione`, `Luogo`, ecc.).
+  - **MULTIPLO:** Verrà creata una sola cartella per ogni nome specificato (es. `Posizione`, `Luogo`, ecc.).
 
 - **NIDIFICA:** Consente di creare cartelle all'interno di altre cartelle.
 
-- **PERCORSO DELLA CARTELLA:** Consente di selezionare facilmente la directory in cui creare le cartelle tramite un comodo selettore di percorsi.
+- **PERCORSO DI DESTINAZIONE:** Consente di selezionare facilmente la directory in cui creare le cartelle tramite un comodo selettore di percorsi.
 
 ## Come funziona
 
 1. Inserisci il nome della cartella che vuoi creare.
-2. Scegli se creare una sola cartella (Unico) o più cartelle incrementali (Incrementale).
+2. Scegli se creare una sola cartella (Multiplo) o più cartelle incrementali (Incrementale).
 3. Nella modalità "Incrementale", specifica quante il numero di cartelle da creare.
 4. Seleziona il percorso in cui vuoi che le cartelle vengano create.
 5. Clicca su "Crea Cartelle" e lascia che l'app faccia il resto!
