@@ -45,34 +45,35 @@ L'interfaccia grafica si aprirà e potrai iniziare subito a creare le cartelle.
 
 ## Updates
 
-- ${\color{red}(01.10.24)}$
-  - **v0.1 (Release 1)**
+- ${\color{red}(01.10.2024)}$
+  - **${\color{green}v0.1 (Release 1)}$**
 
-- ${\color{red}(Coming Soon)}$
-  - **v0.2 (Release 2)**
-  **Interfaccia Utente (UI):**
+- ${\color{red}(09.10.2024)}$
+  - **${\color{green}v0.2 (Release 2)}$**
+ 
+    **Interfaccia Utente (UI):**
 
-  * **Widget a tema (ttk):** Utilizza i widget `ttk` per un aspetto più moderno e professionale.
-  * **Layout organizzato con `LabelFrame`:** Raggruppa i widget in `LabelFrame` per una migliore organizzazione visiva.
-  * **Spaziatura ottimizzata:** Utilizza `padx`, `pady` e `columnconfigure` per una spaziatura equilibrata e un layout dinamico.
-  * **Icone:** Include icone per il bottone "Seleziona" e la label "Anteprima", caricandole dinamicamente e gestendo eventuali errori di file mancanti.  Include anche il ridimensionamento delle icone.
-  * **Anteprima cartelle:** Mostra in anteprima le cartelle che verranno create.
-  * **Tooltip:** Fornisce tooltip concisi e chiari per guidare l'utente.
-  * **Gestione chiara delle modalità:** Gestisce in modo efficiente le modalità "Incrementale" e "Multiplo", disabilitando i controlli non pertinenti.
+    * **Widget a tema (ttk):** Utilizza i widget `ttk` per un aspetto più moderno e professionale.
+    * **Layout organizzato con `LabelFrame`:** Raggruppa i widget in `LabelFrame` per una migliore organizzazione visiva.
+    * **Spaziatura ottimizzata:** Utilizza `padx`, `pady` e `columnconfigure` per una spaziatura equilibrata e un layout dinamico.
+    * **Icone:** Include icone per il bottone "Seleziona" e la label "Anteprima", caricandole dinamicamente e gestendo eventuali errori di file mancanti.  Include anche il ridimensionamento delle icone.
+    * **Anteprima cartelle:** Mostra in anteprima le cartelle che verranno create.
+    * **Tooltip:** Fornisce tooltip concisi e chiari per guidare l'utente.
+    * **Gestione chiara delle modalità:** Gestisce in modo efficiente le modalità "Incrementale" e "Multiplo", disabilitando i controlli non pertinenti.
 
-  **Funzionalità:**
+    **Funzionalità:**
 
-  * **Validazione input:**  Valida l'input dell'utente, inclusi i nomi delle cartelle e il percorso di destinazione, fornendo messaggi di errore chiari nell'anteprima.
-  * **Nidificazione cartelle:** Supporta la creazione di cartelle nidificate.
-  * **Modalità "Incrementale" e "Multiplo":** Offre due modalità di creazione, con supporto per nomi multipli separati da virgole in modalità "Multiplo".
-  * **Gestione robusta degli errori:** Gestisce gli errori durante la creazione delle cartelle, fornendo messaggi informativi all'utente.
+    * **Validazione input:**  Valida l'input dell'utente, inclusi i nomi delle cartelle e il percorso di destinazione, fornendo messaggi di errore chiari nell'anteprima.
+    * **Nidificazione cartelle:** Supporta la creazione di cartelle nidificate.
+    * **Modalità "Incrementale" e "Multiplo":** Offre due modalità di creazione, con supporto per nomi multipli separati da virgole in modalità "Multiplo".
+    * **Gestione robusta degli errori:** Gestisce gli errori durante la creazione delle cartelle, fornendo messaggi informativi all'utente.
 
-  **Codice:**
+    **Codice:**
 
-  * **Ben strutturato:**  Organizzato in classi e funzioni per una migliore leggibilità e manutenibilità.
-  * **Type hinting:** Utilizza i type hint per una maggiore chiarezza e per facilitare il debug.
-  * **`Spinbox` per input numerico:** Utilizza un `Spinbox` per l'input del numero di cartelle, offrendo un'esperienza utente più intuitiva.
-  * **Stile personalizzabile con `ttk.Style`:**  Permette la personalizzazione dello stile dei widget.
+    * **Ben strutturato:**  Organizzato in classi e funzioni per una migliore leggibilità e manutenibilità.
+    * **Type hinting:** Utilizza i type hint per una maggiore chiarezza e per facilitare il debug.
+    * **`Spinbox` per input numerico:** Utilizza un `Spinbox` per l'input del numero di cartelle, offrendo un'esperienza utente più intuitiva.
+    * **Stile personalizzabile con `ttk.Style`:**  Permette la personalizzazione dello stile dei widget.
 
 
 &nbsp;
