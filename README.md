@@ -55,7 +55,8 @@ L'interfaccia grafica si aprirà e potrai iniziare subito a creare le cartelle.
 
 ## Screenshots
 
-- **v0.1 (Release 1)** 
+- **v0.1 (Release 1)**
+
 Modalità Incrementale
 <p align="left">
   <img src="https://github.com/Axel0689/folder_creator/blob/main/screenshots/mode_incrementale.png">
