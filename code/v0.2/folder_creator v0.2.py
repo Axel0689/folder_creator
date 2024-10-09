@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 import os
 from typing import List, Optional
+from PIL import Image, ImageTk  # Importa le classi necessarie da Pillow
 
 class Tooltip:
     def __init__(self, widget, text):
@@ -33,79 +34,115 @@ class FolderCreator:
     def __init__(self):
         self.root = tk.Tk()
         self.root.title("Folder Creator v0.2 - by Axel0689")
-        self.root.geometry("500x300")
+        self.root.geometry("450x480")
         self.root.resizable(False, False)
         
         self.style = ttk.Style()
-        self.style.theme_use('clam')
+        self.style.theme_use('xpnative')
         
         self.current_dir: Optional[str] = None
-        
+
+        self.load_icons() # Carica le icone all'avvio
         self.create_widgets()
         self.create_tooltips()
+
+    def load_icons(self):
+        try:
+            self.folder_icon = ImageTk.PhotoImage(Image.open("folder_icon.png").resize((60, 60))) # Ridimensiona l'icona se necessario
+            self.select_icon = ImageTk.PhotoImage(Image.open("select_icon.png").resize((20, 20)))
+        except FileNotFoundError:
+            print("Icone non trovate. Assicurati che 'folder_icon.png' e 'select_icon.png' siano nella stessa cartella dello script.")
+            self.folder_icon = None  # Imposta le icone a None se non vengono trovate
+            self.select_icon = None
 
     def create_widgets(self):
         main_frame = ttk.Frame(self.root, padding="10")
         main_frame.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
 
-        # Nome della cartella
-        ttk.Label(main_frame, text="Nome della cartella:").grid(row=0, column=0, padx=5, pady=5, sticky=tk.W)
-        self.folder_name_entry = ttk.Entry(main_frame, width=30)
-        self.folder_name_entry.grid(row=0, column=1, columnspan=2, padx=5, pady=5, sticky=(tk.W, tk.E))
+        # Frame per le impostazioni del nome e numero di cartelle
+        name_frame = ttk.LabelFrame(main_frame, text="Nome e Numero Cartelle", padding=(10, 5))
+        name_frame.grid(row=0, column=0, columnspan=3, pady=(0, 10), sticky=(tk.W, tk.E))
 
-        # Numero di cartelle
-        ttk.Label(main_frame, text="Numero di cartelle:").grid(row=1, column=0, padx=5, pady=5, sticky=tk.W)
-        self.num_folders_spinbox = ttk.Spinbox(main_frame, from_=1, to=100, width=10)
+        ttk.Label(name_frame, text="Nome Cartella/e:").grid(row=0, column=0, padx=5, pady=5, sticky=tk.W)
+        self.folder_name_entry = ttk.Entry(name_frame, width=30)
+        self.folder_name_entry.grid(row=0, column=1, padx=5, pady=5, sticky=(tk.W, tk.E))
+
+        ttk.Label(name_frame, text="Numero Cartella/e:").grid(row=1, column=0, padx=5, pady=5, sticky=tk.W)
+        self.num_folders_spinbox = ttk.Spinbox(name_frame, from_=1, to=100, width=5)
         self.num_folders_spinbox.grid(row=1, column=1, padx=5, pady=5, sticky=tk.W)
         self.num_folders_spinbox.set(1)
 
-        # Modalità di creazione
-        ttk.Label(main_frame, text="Modalità di creazione:").grid(row=2, column=0, padx=5, pady=5, sticky=tk.W)
+
+        # Frame per le impostazioni di creazione
+        creation_frame = ttk.LabelFrame(main_frame, text="Modalità di Creazione", padding=(10, 5))
+        creation_frame.grid(row=1, column=0, columnspan=3, pady=(0, 10), sticky=(tk.W, tk.E))
+
         self.mode_var = tk.StringVar(value="incrementale")
-        ttk.Radiobutton(main_frame, text="Incrementale", variable=self.mode_var, 
-                        value="incrementale", command=self.on_mode_change).grid(row=2, column=1, padx=5, pady=5)
-        ttk.Radiobutton(main_frame, text="Unico", variable=self.mode_var,
-                        value="unico", command=self.on_mode_change).grid(row=2, column=2, padx=5, pady=5)
+        ttk.Radiobutton(creation_frame, text="Incrementale", variable=self.mode_var,
+                        value="incrementale", command=self.on_mode_change).grid(row=0, column=0, padx=5, pady=5, sticky=tk.W)
+        ttk.Radiobutton(creation_frame, text="Multiplo", variable=self.mode_var,
+                        value="multiplo", command=self.on_mode_change).grid(row=1, column=0, padx=5, pady=5, sticky=tk.W)
 
-        # Nidifica checkbox
+
         self.nidifica_var = tk.BooleanVar(value=False)
-        ttk.Checkbutton(main_frame, text="Nidifica", variable=self.nidifica_var,
-                        command=self.update_preview).grid(row=1, column=1, columnspan=3, padx=5, pady=5)
+        ttk.Checkbutton(creation_frame, text="Nidifica", variable=self.nidifica_var,
+                        command=self.update_preview).grid(row=0, column=1, padx=(20,5), pady=5, rowspan=2, sticky=tk.N)
 
-        # Percorso della cartella
-        ttk.Label(main_frame, text="Percorso della cartella:").grid(row=4, column=0, padx=5, pady=5, sticky=tk.W)
-        self.dir_entry = ttk.Entry(main_frame, width=40)
-        self.dir_entry.grid(row=4, column=1, padx=5, pady=5, sticky=(tk.W, tk.E))
+        # Frame per il percorso
+        path_frame = ttk.LabelFrame(main_frame, text="Percorso di destinazione", padding=(10, 5))
+        path_frame.grid(row=2, column=0, columnspan=3, pady=(0, 10), sticky=(tk.W, tk.E))
+
+        ttk.Label(path_frame, text="Percorso:").grid(row=0, column=0, padx=5, pady=5, sticky=tk.W)
+        self.dir_entry = ttk.Entry(path_frame, width=40)
+        self.dir_entry.grid(row=0, column=1, padx=5, pady=5, sticky=(tk.W, tk.E))
         
-        select_button = ttk.Button(main_frame, text="Seleziona", command=self.select_directory)
-        select_button.grid(row=4, column=2, padx=5, pady=5)
+        select_button = ttk.Button(path_frame, text="Seleziona", command=self.select_directory)
+        select_button.grid(row=0, column=2, padx=(5,0), pady=5)
 
-        # Preview
-        ttk.Label(main_frame, text="Anteprima:").grid(row=5, column=0, padx=5, pady=5, sticky=tk.W)
-        self.preview_text = tk.Text(main_frame, height=5, width=40, state="disabled")
-        self.preview_text.grid(row=5, column=1, columnspan=2, padx=5, pady=5)
+        # Frame per l'anteprima
+        preview_frame = ttk.LabelFrame(main_frame, text="Anteprima", padding=(10, 5))
+        preview_frame.grid(row=3, column=0, columnspan=3, pady=(0, 10), sticky=(tk.W, tk.E))
 
-        # Bottone per creare le cartelle
-        create_button = ttk.Button(main_frame, text="Crea Cartelle", command=self.create_folders)
-        create_button.grid(row=6, column=0, columnspan=3, padx=5, pady=10)
+        self.preview_text = tk.Text(preview_frame, height=5, width=40, state="disabled")
+        self.preview_text.grid(row=0, column=0, columnspan=3, padx=5, pady=5, sticky=tk.W)
 
-        # Configura il grid
-        for i in range(3):
-            main_frame.columnconfigure(i, weight=1)
+
+        # Bottone Crea Cartelle
+        create_button = ttk.Button(main_frame, text="Genera Cartella/e", command=self.create_folders)
+        create_button.grid(row=4, column=0, columnspan=3, pady=10)
+
+        # Configura il grid per main_frame (spaziatura dinamica)
+        main_frame.columnconfigure(0, weight=1)  # Colonna espandibile
+
 
         # Binding eventi
         self.folder_name_entry.bind('<KeyRelease>', lambda e: self.update_preview())
         self.num_folders_spinbox.bind('<KeyRelease>', lambda e: self.update_preview())
+        self.num_folders_spinbox.config(command=self.update_preview)
+
+
+        # Usa l'icona per la preview (se presente)
+        if self.folder_icon:
+            preview_label = ttk.Label(preview_frame, image=self.folder_icon, compound=tk.LEFT) # aggiunta icona
+            preview_label.grid(row=0, column=0, padx=(0,5), pady=5, sticky=tk.W) # aggiunta icona
+            self.preview_text.grid(row=0, column=1, columnspan=2, padx=(0,5), pady=5, sticky=tk.W) # aggiunta icona
+
+        else: # codice precedente senza icona, nel caso in cui non venga trovata
+            ttk.Label(preview_frame).grid(row=0, column=0, padx=5, pady=5, sticky=tk.W) # codice precedente
+            self.preview_text.grid(row=0, column=0, columnspan=3, padx=5, pady=5, sticky=tk.W) # codice precedente
+        # Bottone "Seleziona" con icona
+        select_button = ttk.Button(path_frame, text="Seleziona", image=self.select_icon, compound=tk.LEFT, command=self.select_directory)
+        select_button.grid(row=0, column=2, padx=(5, 0), pady=5)
+
+        
 
     def create_tooltips(self):
-        Tooltip(self.folder_name_entry, 
-            "In modalità Incrementale: nome base per le cartelle"
-            "\nIn modalità Unico: lista di nomi separati da virgola")
-        Tooltip(self.num_folders_spinbox, 
-            "Numero di cartelle da creare (solo in modalità Incrementale)")
-        Tooltip(self.dir_entry, 
-            "Usa il pulsante 'Seleziona' per scegliere\n"
-            "la destinazione delle nuove cartelle")
+        # Usa docstring multiline per tooltips più leggibili
+        Tooltip(self.folder_name_entry, """Modalità Incrementale: crea cartelle incrementali con nome base comune.
+Modalità Multiplo: crea cartelle con nomi differenti. Usa la virgola come separatore.""")
+        Tooltip(self.num_folders_spinbox, "Numero di cartelle da creare (attiva solo in modalità Incrementale).")
+        Tooltip(self.dir_entry, "Percorso di destinazione delle nuove cartelle.")
+
 
     def on_mode_change(self):
         is_incrementale = self.mode_var.get() == "incrementale"
