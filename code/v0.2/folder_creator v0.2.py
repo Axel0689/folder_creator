@@ -3,6 +3,7 @@ from tkinter import filedialog, messagebox, ttk
 import os
 from typing import List, Optional
 from PIL import Image, ImageTk  # Importa le classi necessarie da Pillow
+import sys
 
 class Tooltip:
     def __init__(self, widget, text):
@@ -48,11 +49,20 @@ class FolderCreator:
 
     def load_icons(self):
         try:
-            self.folder_icon = ImageTk.PhotoImage(Image.open("folder_icon.png").resize((60, 60))) # Ridimensiona l'icona se necessario
-            self.select_icon = ImageTk.PhotoImage(Image.open("select_icon.png").resize((20, 20)))
+            # Ottiene il percorso corretto del file, sia in script che in EXE
+            base_path = getattr(sys, '_MEIPASS', os.path.dirname(os.path.abspath(__file__)))
+    
+            # Percorsi assoluti per le icone
+            folder_icon_path = os.path.join(base_path, "icons", "folder_icon.png")
+            select_icon_path = os.path.join(base_path, "icons", "select_icon.png")
+    
+            # Carica le immagini con il percorso corretto
+            self.folder_icon = ImageTk.PhotoImage(Image.open(folder_icon_path).resize((60, 60)))
+            self.select_icon = ImageTk.PhotoImage(Image.open(select_icon_path).resize((20, 20)))
+    
         except FileNotFoundError:
-            print("Icone non trovate. Assicurati che 'folder_icon.png' e 'select_icon.png' siano nella stessa cartella dello script.")
-            self.folder_icon = None  # Imposta le icone a None se non vengono trovate
+            print("Icone non trovate. Assicurati che siano nella cartella 'icons'.")
+            self.folder_icon = None
             self.select_icon = None
 
     def create_widgets(self):
